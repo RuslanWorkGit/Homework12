@@ -17,6 +17,9 @@ struct ContentView: View {
                 ]) {
                     ForEach(0 ..< 25, id: \.self) { index in
                         CustomVollectionViewCell(imageName: "\(index)")
+                            .onLongPressGesture {
+                                print("Tap on \(index) cell")
+                            }
                     }
                 }
                 
