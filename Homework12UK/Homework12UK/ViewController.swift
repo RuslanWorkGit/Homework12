@@ -54,7 +54,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let screenWidth = view.frame.width
         let columCount: CGFloat = 2
         let itemWidth = screenWidth / columCount
-        return CGSize(width: itemWidth - 16, height: itemWidth + 100)
+        return CGSize(width: itemWidth - 8, height: itemWidth + 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -62,7 +62,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        8
+        .zero
     }
 }
 

@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                LazyVGrid(columns: [
+                    GridItem(.flexible()),
+                    GridItem(.flexible())
+                ]) {
+                    ForEach(0 ..< 25, id: \.self) { index in
+                        CustomVollectionViewCell(imageName: "\(index)")
+                    }
+                }
+                
+                
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
